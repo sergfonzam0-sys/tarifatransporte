@@ -1,17 +1,28 @@
 body {
-    background-color: #e6f2ff; /* Fondo azul claro */
+    background-color: #e6f2ff;
     text-align: center;
     font-family: Arial, sans-serif;
+    padding: 30px;
 }
-.bus {
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.descuento {
     color: green;
+    font-weight: bold;
+    font-size: 22px;
 }
-.metro {
-    color: blue;
-}
-.taxi {
-    color: #b30000;
-}
-.inter {
-    color: #663300;
+
+img {
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
 }
