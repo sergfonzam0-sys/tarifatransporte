@@ -1,0 +1,17 @@
+body {
+    background-color: #e6f2ff; /* Fondo azul claro */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.bus {
+    color: green;
+}
+.metro {
+    color: blue;
+}
+.taxi {
+    color: #b30000;
+}
+.inter {
+    color: #663300;
+}

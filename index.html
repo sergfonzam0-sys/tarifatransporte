@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF‑8">
+    <title>Calculadora de Tarifas de Transporte</title>
+    <link rel="stylesheet" href="css/colores.css">
+</head>
+<body>
+    <script>
+        let nombre = prompt("¿ Su nombre es ?:");
+        let tipoTrans = parseInt(prompt("Tipo de transporte:\n1‑Bus Urbano\n2‑Metro\n3‑Taxi\n4‑Intermunicipal"));
+        let condicion = parseInt(prompt("Condición especial:\n1‑Estudiante\n2‑Adulto mayor\n3‑Ninguna"));
+
+        let valorBase = 0;
+        let nombreTrans = "";
+        let claseColor = "";
+
+        switch(tipoTrans) {
+            case 1:
+                valorBase = 2500;
+                nombreTrans = "Bus Urbano";
+                claseColor = "bus";
+                break;
+            case 2:
+                valorBase = 2800;
+                nombreTrans = "Metro";
+                claseColor = "metro";
+                break;
+            case 3:
+                valorBase = 5000;
+                nombreTrans = "Taxi";
+                claseColor = "taxi";
+                break;
+            case 4:
+                valorBase = 10000;
+                nombreTrans = "Intermunicipal";
+                claseColor = "inter";
+                break;
+            default:
+                alert("Opción de transporte no válida");
+                document.write("<h3>Opción inválida</h3>");
+        }
+
+        let descuento = 0;
+        if(condicion === 1) {
+            descuento = valorBase * 0.20;
+        } else if(condicion === 2) {
+            descuento = valorBase * 0.30;
+        } else if(condicion === 3) {
+            descuento = 0;
+        } else {
+            alert("Condición no válida");
+        }
+
+        let total = valorBase - descuento;
+
+        document.write("<h2>Calculadora de Pasajes</h2>");
+        document.write("<p>Nombre del usuario: " + nombre + "</p>");
+        document.write("<p class='" + claseColor + "'>Tipo de transporte: " + nombreTrans + "</p>");
+        document.write("<p>Descuento aplicado: $" + descuento + "</p>");
+        document.write("<p><strong>Valor total a pagar: $" + total + "</strong></p>");
+    </script>
+    <center><img src="img/Transporte.jpg" alt=""></center>
+</body>
+</html>
